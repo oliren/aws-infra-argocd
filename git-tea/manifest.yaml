@@ -18,8 +18,12 @@ spec:
           value: gitea@git.aws.lockirin.pp.ua
         - name: ingress.hosts[0].host
           value: git.aws.lockirin.pp.ua
-        - name: persistence.storageClass
+        - name: global.storageClass
           value: gp3
+        # - name: postgresql-ha.global.defaultStorageClass
+        #   value: gp3
+        # - name: valkey-cluster.global.defaultStorageClass
+        #   value: gp3
   destination:
     server: "https://kubernetes.default.svc"
     namespace: default
