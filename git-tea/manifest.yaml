@@ -12,8 +12,6 @@ spec:
     helm:
       releaseName: git-tea
       parameters:
-        - name: clusterDomain
-          value: git.aws.lockirin.pp.ua
         - name: gitea.admin.email
           value: gitea@git.aws.lockirin.pp.ua
         - name: ingress.hosts[0].host
