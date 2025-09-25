@@ -12,7 +12,6 @@ spec:
     helm:
       releaseName: git-tea
       values: |
-        # All overrides, including nested ones, go here
         ingress:
           enabled: true
           className: alb
@@ -41,26 +40,3 @@ spec:
     automated:
       prune: true
       selfHeal: true
-
-# project: default
-# source:
-#   repoURL: https://dl.gitea.com/charts
-#   targetRevision: 12.3.0
-#   helm:
-#     parameters:
-#       - name: clusterDomain
-#         value: git.aws.lockirin.pp.ua
-#       - name: gitea.admin.email
-#         value: gitea@git.aws.lockirin.pp.ua
-#       - name: ingress.hosts[0].host
-#         value: git.aws.lockirin.pp.ua
-#       - name: persistence.storageClass
-#         value: gp3
-#   chart: gitea
-# destination:
-#   server: https://kubernetes.default.svc
-#   namespace: gitea
-# syncPolicy:
-#   automated: {}
-#   syncOptions:
-#     - CreateNamespace=true
